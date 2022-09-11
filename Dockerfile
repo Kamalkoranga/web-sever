@@ -1,6 +1,5 @@
-FROM ubuntu 
+FROM ubuntu:20.04
 RUN apt-get update
-RUN apt-get install –y apache2 
-RUN apt-get install –y apache2-utils 
-RUN apt-get clean 
-EXPOSE 80 CMD [“apache2ctl”, “-D”, “FOREGROUND”]
+RUN apt install docker.io
+RUN systemctl start docker
+RUN systemctl enable docker
